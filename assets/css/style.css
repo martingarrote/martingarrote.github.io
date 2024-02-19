@@ -14,11 +14,16 @@ img {
 
 main {
     height: 100vh;
+    width: 100vw;
     background-color: rgb(220, 220, 220);
     display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: 15% 1fr 15%;
 }
 
 .startpage {
+    grid-column: 2/3;
+    grid-row: 2/3;
     padding: 30px;
     margin: auto;
     text-align: center;
@@ -54,15 +59,46 @@ main {
 }
 
 footer {
+    grid-column: 1/4;
+    grid-row: 3/4;
     font-size: small;
     text-align: center;
-    align-self: end;
-    margin-bottom: 45px;
+    align-self: center;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 950px) {
     .startpage .menu ul {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 465px) {
+
+    img {
+        height: 230px;
+        width: 230px;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10%;
+    }
+
+    .startpage {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .startpage .menu ul li {
+        font-size: large;
+    }
+
+    footer {
+        padding: 20px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-self: end;
+        font-size: medium;
     }
 }
