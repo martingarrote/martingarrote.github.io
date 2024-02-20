@@ -58,6 +58,8 @@ function changePage() {
 function changeSubPage(subpage) {
     Array.from(subPages).forEach((s) => {s.classList.add("hidden")});
     document.getElementsByClassName(subpage)[0].classList.remove("hidden");
+
+    document.getElementsByClassName("checkbox")[0].checked = false;
 }
 
 // Change the active item, emphasizing it among the other auxiliary menu items
