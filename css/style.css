@@ -7,5 +7,22 @@
 }
 
 :root {
+    /* made to easily control sizes */
     font-size: 62.5%; /* 1rem = 10px */
+
+    /* fonts */
+    --title-font: Roboto Slab;
+    --default-font: Roboto;
+
+    /* text colors */
+    --default-text-color: #bbbbbb;
+    --title-text-color: #ffffff;
+    --title-hover-color: #808080;
+
+    /* background colors */
+    --bg-header-color: #181b20;
+    --bg-body-color: #22272E;
+
+    /* element sizes */
+    --content-width: 60%;
 }
