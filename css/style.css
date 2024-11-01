@@ -26,3 +26,42 @@
     /* element sizes */
     --content-width: 60%;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-body-color);
+    color: var(--default-text-color);
+    font-family: var(--default-font);
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: var(--title-font);
+    width: var(--content-width);
+    margin: 2.15rem auto;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--title-text-color);
+    font-family: var(--title-font);
+    font-weight: bold;
+}
+
+header a:hover {
+    color: var(--title-hover-color);
+    transition: 0.1s linear;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 6rem;
+}
