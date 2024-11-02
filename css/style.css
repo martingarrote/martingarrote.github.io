@@ -119,7 +119,7 @@ main {
 }
 
 #techs {
-    margin: 9.6rem auto 0 auto;
+    margin: 9rem auto 0 auto;
     overflow: hidden;
 }
 
@@ -171,10 +171,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 9rem auto 0 auto;
 }
 
 #arrow {
-    margin: 9rem auto 0 auto;
     font-size: 3.1rem;
     border-radius: 100%;
     padding: 0.3rem;
