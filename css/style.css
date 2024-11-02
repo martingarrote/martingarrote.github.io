@@ -91,7 +91,7 @@ main {
 }
 
 #highlight {
-    margin: 9.4rem auto;
+    margin: 9.4rem auto 0 auto;
 }
 
 #highlight-content img {
@@ -167,11 +167,40 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+#arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#arrow {
+    margin: 9rem auto 0 auto;
+    font-size: 3.1rem;
+    border-radius: 100%;
+    padding: 0.3rem;
+    color: var(--title-text-color);
+    animation: bounce 1.3s infinite;
+}
+
+#arrow:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 @keyframes slide-left {
     0% {
         transform: translateX(0);
     }
     100% {
         transform: translateX(-50%);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 }
