@@ -85,12 +85,12 @@ nav {
 }
 
 main {
-    width: var(--content-width);
     margin: auto;
     font-size: 1.6rem;
 }
 
 #highlight {
+    width: var(--content-width);
     margin: 9.4rem auto 0 auto;
 }
 
