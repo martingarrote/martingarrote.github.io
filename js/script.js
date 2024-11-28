@@ -1,14 +1,33 @@
-fetch("../data/techs.json")
-    .then(response => response.json())
-    .then(techs => {
-        const techContainer = document.getElementById("tech-container");
+const header = document.querySelector('header');
 
-        techContainer.appendChild(getTechWrapper(techs));
-        techContainer.appendChild(getTechWrapper(techs));
-    })
-    .catch(error => console.error(error));
+document.addEventListener("DOMContentLoaded", () => {
+    loadTechs();
+    // loadProjects();
+})
 
-function getTechWrapper(techList) {
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) {
+    header.classList.add('fixed');
+  } else {
+    header.classList.remove('fixed');
+  }
+});
+
+function loadTechs() {
+    fetch("../data/techs.json")
+        .then(response => response.json())
+        .then(techs => insertTechs(techs))
+        .catch(error => console.log(error));
+}
+
+function insertTechs(techs) {
+    const techContainer = document.getElementById("tech-container");
+
+    techContainer.appendChild(createTechWrapper(techs));
+    techContainer.appendChild(createTechWrapper(techs));
+}
+
+function createTechWrapper(techList) {
     const techWrapper = document.createElement("div");
     const largeIcons = ["Mockito"];
 
