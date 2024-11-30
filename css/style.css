@@ -204,6 +204,137 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+#about {
+    text-align: center;
+    margin-top: 8rem;
+    margin: 8rem auto 0rem auto;
+    width: 60%;
+}
+
+#timeline {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--default-text-color);
+    font-size: 1.8rem;
+}
+
+.year::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 0.1rem;
+    background-color: white;
+}
+
+.year-box {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.year-box p {
+    margin: 1.5rem 0rem 1.5rem 2rem;
+    max-width: 80%;
+    color: var(--default-text-color);
+    text-align: justify;
+}
+
+.year-box p > strong {
+    color: rgb(205, 205, 205);
+}
+
+.year-box:hover {
+    cursor: default;
+}
+
+.year-box:hover > p > strong {
+    color: rgb(55, 185, 255);
+    transition: all 0.1s linear;
+}
+
+.year-box:hover > .year {
+    color: white;
+    transition: all 0.1s linear;
+}
+
+.year-box:hover > p {
+    color: rgb(215, 215, 215);
+    transition: all 0.1s linear;
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    margin: 1rem 0rem;
+    background-color: white;
+}
+
+.line.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 0.2rem !important;
+    height: unset;
+    margin: 0rem 2rem 0rem 0rem;
+}
+
+.year-box .line.vertical::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    margin-right: 2rem;
+    height: 0.1rem;
+    background-color: white;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.about-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid white;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    gap: 0.5rem;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+    max-width: 15rem;
+}
+
+.about-button i {
+    font-size: 2rem;
+}
+
+.about-button:hover {
+    cursor: pointer;
+    color: rgb(55, 185, 255);
+    transition: color 0.15s linear;
+}
+
+.about-button:active {
+    border: 0.15rem solid rgb(55, 185, 255);
+    transition: border 0.15s linear;
+}
+
 @keyframes slide-left {
     0% {
         transform: translateX(0);

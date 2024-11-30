@@ -2,6 +2,7 @@ const header = document.querySelector('header');
 
 document.addEventListener("DOMContentLoaded", () => {
     loadTechs();
+    loadAbout();
     // loadProjects();
 })
 
@@ -55,4 +56,66 @@ function createTechWrapper(techList) {
     });
 
     return techWrapper;
+}
+
+function loadAbout() {
+  fetch("../data/about.json")
+    .then(response => response.json())
+    .then(
+      content => {
+        insertTimeline(content.timeline)
+
+        localStorage.setItem("summary", content.summary)
+      }
+    )
+    .catch(error => console.log(error));
+
+}
+
+function insertTimeline(timeline) {
+  const aboutContent = document.getElementById("timeline");
+
+  aboutContent.innerHTML = "";
+
+  timeline.forEach(t => {
+    aboutContent.appendChild(createYearBox(t));
+  })
+}
+
+function createYearBox(data) {
+  const yearBox = document.createElement("div")
+  yearBox.classList.add("year-box");
+
+  const year = document.createElement("span");
+  year.classList.add("year");
+  year.innerText = data.year;
+
+  const verticalLine = document.createElement("span");
+  verticalLine.classList.add("line");
+  verticalLine.classList.add("vertical");
+
+  const p = document.createElement("p");
+  p.innerHTML = data.text
+
+  yearBox.appendChild(year)
+  yearBox.appendChild(verticalLine);
+  yearBox.appendChild(p);
+
+  return yearBox;
+}
+
+function download() {
+  const link = document.createElement("a");
+
+  link.setAttribute("download", "martingarrote_cv.pdf")
+  link.href = "/assets/files/martingarrote_cv.pdf";
+  document.body.appendChild(link)
+  link.click();
+  link.remove();
+}
+
+function copyAboutSummary() {
+  const summary = localStorage.getItem("summary")
+
+  navigator.clipboard.writeText(summary);
 }
