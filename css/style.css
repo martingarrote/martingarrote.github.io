@@ -335,6 +335,182 @@ main {
     transition: border 0.15s linear;
 }
 
+#projects {
+    margin: 2rem auto 0rem auto;
+    text-align: center;
+}
+
+#projects h2 {
+    margin: 5rem 0rem;
+}
+
+#project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: fit-content;
+    max-width: 40rem;
+    padding: 1.5rem;
+    border: 0.1rem solid white;
+    border-radius: 2rem;
+    transition: all 0.2s;
+}
+
+.project:hover {
+    cursor: default;
+    box-shadow: 0rem 0rem 0.8rem white;
+}
+
+.project > * {
+    max-width: 40rem;
+}
+
+.project .img-container {
+    max-width: inherit;
+    overflow: hidden;
+    border-radius: 0.8rem;
+}
+
+.project img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+    max-width: inherit;
+    border: 0.2rem solid gray;
+    border-radius: inherit;
+    transition: all .3s ease;
+}
+
+.project img:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.project-content {
+    width: 100%;
+    height: 30rem;
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.project-content h3 {
+    margin-bottom: 1rem;
+}
+
+.project-content p {
+    text-align: justify;
+    margin: 1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0.8rem 0rem;
+    padding: 0rem 1rem;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(130, 195, 255);
+    width: fit-content;
+    padding: 0.2rem 0.4rem;
+    user-select: none;
+    font-style: italic;
+    transition: color 0.1s;
+}
+
+.tag::before {
+    content: "# ";
+}
+
+.tag:hover {
+    color: rgb(60, 160, 255);
+}
+
+.project-buttons {
+    width: fit-content;
+    margin-right: auto;
+}
+
+.project-btn {
+    text-decoration: none;
+    color: white;
+    max-width: fit-content;
+    margin: 0rem 0.5rem;
+}
+
+.project-btn:hover {
+    cursor: pointer;
+}
+
+.project-btn i {
+    font-size: 3.6rem;
+    transition: opacity .1s;
+}
+
+.project-btn i:hover {
+    opacity: 0.6;
+}
+
+dialog {
+    border: 0.2rem solid gray;
+    margin: 10rem auto;
+    border-radius: 0.8rem;
+    aspect-ratio: 16/9;
+    height: auto;
+    width: 70%;
+    overflow: hidden;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog:focus, iframe:focus {
+    outline: none;
+}
+
+dialog iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+    margin: none;
+    padding: none;
+}
+
+dialog img {
+    width: 100%;
+    height: 100%;
+}
+
+#close-modal {
+    font-size: 3rem;
+    color: white;
+}
+
+#close-modal:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal-body {
+    aspect-ratio: 16/9;
+    height: auto;
+    width: 100%;
+}
+
 @keyframes slide-left {
     0% {
         transform: translateX(0);
@@ -351,4 +527,8 @@ main {
     50% {
         transform: translateY(-10px);
     }
+}
+
+@media (width < 1020) {
+    /* compact header */
 }

@@ -20,6 +20,8 @@
         </nav>
     </header>
 
+    <dialog class="modal"></dialog>
+
     <main>
 
         <section id="highlight">
@@ -35,9 +37,7 @@
 
             <div id="techs">
                 <h2>Tecnologias</h2>
-                <div id="tech-container">
-
-                </div>
+                <div id="tech-container"></div>
             </div>
 
             <div id="arrow-container">
@@ -52,12 +52,19 @@
             <div id="timeline"></div>
 
             <div id="buttons-container">
-                <button onclick="startDownload()" id="download" class="about-button"><i class="ph ph-download-simple"></i> Baixar Currículo</button>
+                <button onclick="download()" id="download" class="about-button"><i class="ph ph-download-simple"></i> Baixar Currículo</button>
                 <button onclick="copyAboutSummary()" id="copy" class="about-button copy"><i class="ph ph-copy"></i> Copiar Resumo</button>
             </div>
 
         </section>
 
+        <section id="projects">
+            
+            <h2>Projetos</h2>
+            <div id="project-container"></div>
+
+        </section>
+        
     </main>
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
