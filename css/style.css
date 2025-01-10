@@ -376,17 +376,18 @@ main {
 }
 
 .project .img-container {
+    aspect-ratio: 16/9;
     max-width: inherit;
-    overflow: hidden;
+    border: 0.2rem solid gray;
     border-radius: 0.8rem;
+    overflow: hidden;
 }
 
 .project img {
-    aspect-ratio: 16/9;
+    aspect-ratio: inherit;
     width: 100%;
     height: auto;
     max-width: inherit;
-    border: 0.2rem solid gray;
     border-radius: inherit;
     transition: all .3s ease;
 }
