@@ -16,10 +16,11 @@
 
     /* text colors */
     --default-text-color: #bbbbbb;
+    --default-text-color-strong: #dcdcdc;
     --title-text-color: #ffffff;
     --title-hover-color: #808080;
 
-    /* background colors */
+    /* background */
     --bg-header-color: rgba(0, 0, 0, 0.2);
     --bg-gradient-start-color: #22272E;
     --bg-gradient-end-color: #0b0c0f;
@@ -268,7 +269,7 @@ main {
 }
 
 .year-box:hover > p {
-    color: rgb(215, 215, 215);
+    color: var(--default-text-color-strong);
     transition: all 0.1s linear;
 }
 
@@ -369,6 +370,10 @@ main {
 .project:hover {
     cursor: default;
     transform: scale(1.02);
+}
+
+.project:hover .project-content > p {
+    color: var(--default-text-color-strong);
 }
 
 .project > * {
