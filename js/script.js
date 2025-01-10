@@ -1,23 +1,9 @@
 const header = document.querySelector("header");
-const modal = document.querySelector(".modal");
-const closeModal = document.getElementById("close-modal");
-
-function onClick(event) {
-  if (event.target === modal) {
-    modal.close();
-  }
-}
-
-modal.addEventListener("click", onClick);
-modal.showModal();
-
-// closeModal.onclick = modal.close();
 
 document.addEventListener("DOMContentLoaded", () => {
     loadTechs();
     loadAbout();
     loadProjects();
-    closeModal.onclick = modal.close();
 })
 
 window.addEventListener('scroll', () => {
@@ -137,31 +123,7 @@ function copyAboutSummary() {
 function loadProjects() {
   fetch("../data/projects.json")
     .then(response => response.json())
-    .then(projects => {
-      insertProjects(projects)
-
-      const openIFrameNodes = document.querySelectorAll(".open-iframe");
-      const imageNodes = document.querySelectorAll(".project-image")
-
-      openIFrameNodes.forEach(node => {
-        node.addEventListener("click", () => {
-          const target = event.target.parentNode;
-
-          insertIFrame(target.getAttribute("data-url"));
-          modal.showModal();
-        })
-      });
-
-      imageNodes.forEach(image => {
-        image.addEventListener("click", () => {
-          const target = event.target;
-
-          insertImage(target.src)
-          modal.showModal();
-        })
-      })
-
-    })
+    .then(projects => insertProjects(projects))
     .catch(error => console.log(error));
 }
 
@@ -187,7 +149,9 @@ function createProjectStructure(project) {
 
   buttons += project.website ? `<a href="${project.website}" class="project-btn"><i class="ph ph-globe"></i></a>` : "";
   buttons += project.github ? `<a href="${project.github}" class="project-btn"><i class="ph ph-github-logo"></i></a>` : "";
-  buttons += project.openable ? `<a class="project-btn open-iframe" data-url="${project.website}"><i class="ph ph-frame-corners"></i></a>` : "";
+  
+  // need modal implementation
+  // buttons += project.openable ? `<a class="project-btn open-iframe" data-url="${project.website}"><i class="ph ph-frame-corners"></i></a>` : "";
 
   description += project.description.part1 ? `<p>${project.description.part1}</p>` : "";
   description += project.description.part2 ? `<p>${project.description.part2}</p>` : "";
@@ -209,12 +173,4 @@ function createProjectStructure(project) {
     </div>
   </div>
   `;
-}
-
-function insertIFrame(url) {
-  modal.innerHTML = `<iframe src="${url}"></iframe>`
-}
-
-function insertImage(source) {
-  modal.innerHTML = `<img src="${source}">`
 }
