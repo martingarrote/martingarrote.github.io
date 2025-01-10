@@ -336,7 +336,7 @@ main {
 }
 
 #projects {
-    margin: 2rem auto 0rem auto;
+    margin: 2rem auto;
     text-align: center;
 }
 
@@ -368,7 +368,7 @@ main {
 
 .project:hover {
     cursor: default;
-    box-shadow: 0rem 0rem 0.8rem white;
+    transform: scale(1.02);
 }
 
 .project > * {
