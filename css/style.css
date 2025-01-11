@@ -13,12 +13,21 @@
     /* fonts */
     --title-font: Roboto Slab;
     --default-font: Roboto;
-
+    
     /* text colors */
-    --default-text-color: #bbbbbb;
-    --default-text-color-strong: #dcdcdc;
+    --base-color: white;
+
     --title-text-color: #ffffff;
     --title-hover-color: #808080;
+    --default-text-color: #bbbbbb;
+    --default-text-color-intense: #dcdcdc;
+    --strong-text-color: #cdcdcd;
+    --vibrant-text-color: #37b9ff;
+
+    --transparent-background: rgba(255, 255, 255, 0.1);
+    --project-tag-background: rgba(255, 255, 255, 0.2);
+    --project-tag-text-color: rgb(130, 195, 255);
+    --tag-hover-color: rgb(60, 160, 255);
 
     /* background */
     --bg-header-color: rgba(0, 0, 0, 0.2);
@@ -78,7 +87,7 @@ header {
 
 header.fixed {
     margin: 1rem auto;
-    border: 0.2rem solid white;
+    border: 0.2rem solid var(--base-color);
     border-radius: 0.8rem;
     padding: 1.1rem 12rem;
     width: calc(var(--content-width) + 24.4rem);
@@ -182,7 +191,7 @@ main {
 }
 
 .tech-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--transparent-background);
 }
 
 #arrow-container {
@@ -202,7 +211,7 @@ main {
 
 #arrow:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--transparent-background);
 }
 
 #about {
@@ -234,7 +243,7 @@ main {
     display: block;
     width: 2rem;
     height: 0.1rem;
-    background-color: white;
+    background-color: var(--base-color);
 }
 
 .year-box {
@@ -251,7 +260,7 @@ main {
 }
 
 .year-box p > strong {
-    color: rgb(205, 205, 205);
+    color: var(--strong-text-color);
 }
 
 .year-box:hover {
@@ -259,17 +268,17 @@ main {
 }
 
 .year-box:hover > p > strong {
-    color: rgb(55, 185, 255);
+    color: var(--vibrant-text-color);
     transition: all 0.1s linear;
 }
 
 .year-box:hover > .year {
-    color: white;
+    color: var(--base-color);
     transition: all 0.1s linear;
 }
 
 .year-box:hover > p {
-    color: var(--default-text-color-strong);
+    color: var(--default-text-color-intense);
     transition: all 0.1s linear;
 }
 
@@ -278,7 +287,7 @@ main {
     width: 100%;
     height: 0.1rem;
     margin: 1rem 0rem;
-    background-color: white;
+    background-color: var(--base-color);
 }
 
 .line.vertical {
@@ -296,7 +305,7 @@ main {
     width: 2rem;
     margin-right: 2rem;
     height: 0.1rem;
-    background-color: white;
+    background-color: var(--base-color);
 }
 
 #buttons-container {
@@ -311,11 +320,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.2rem solid white;
+    border: 0.2rem solid var(--base-color);
     border-radius: 0.8rem;
     padding: 1rem;
     gap: 0.5rem;
-    color: white;
+    color: var(--base-color);
     background-color: transparent;
     width: 100%;
     max-width: 15rem;
@@ -327,12 +336,12 @@ main {
 
 .about-button:hover {
     cursor: pointer;
-    color: rgb(55, 185, 255);
+    color: var(--vibrant-text-color);
     transition: color 0.15s linear;
 }
 
 .about-button:active {
-    border: 0.15rem solid rgb(55, 185, 255);
+    border: 0.15rem solid var(--vibrant-text-color);
     transition: border 0.15s linear;
 }
 
@@ -362,7 +371,7 @@ main {
     width: fit-content;
     max-width: 40rem;
     padding: 1.5rem;
-    border: 0.1rem solid white;
+    border: 0.1rem solid var(--base-color);
     border-radius: 2rem;
     transition: all 0.3s linear;
 }
@@ -376,7 +385,7 @@ main {
 }
 
 .project:hover .project-content > p {
-    color: var(--default-text-color-strong);
+    color: var(--default-text-color-intense);
 }
 
 .project > * {
@@ -396,7 +405,6 @@ main {
     width: 100%;
     height: auto;
     max-width: inherit;
-    border-radius: inherit;
     transition: all .3s ease;
 }
 
@@ -430,8 +438,8 @@ main {
 }
 
 .tag {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(130, 195, 255);
+    background-color: var(--project-tag-background);
+    color: var(--project-tag-text-color);
     width: fit-content;
     padding: 0.2rem 0.4rem;
     user-select: none;
@@ -444,7 +452,7 @@ main {
 }
 
 .tag:hover {
-    color: rgb(60, 160, 255);
+    color: var(--tag-hover-color);
 }
 
 .project-buttons {
@@ -454,7 +462,7 @@ main {
 
 .project-btn {
     text-decoration: none;
-    color: white;
+    color: var(--base-color);
     max-width: fit-content;
     margin: 0rem 0.5rem;
 }
