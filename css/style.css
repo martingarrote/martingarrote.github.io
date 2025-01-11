@@ -364,12 +364,15 @@ main {
     padding: 1.5rem;
     border: 0.1rem solid white;
     border-radius: 2rem;
-    transition: all 0.2s;
+    transition: all 0.3s linear;
 }
 
 .project:hover {
     cursor: default;
-    transform: scale(1.02);
+}
+
+#project-container.blur-inside .project:not(:hover) {
+    filter: blur(2px);
 }
 
 .project:hover .project-content > p {
