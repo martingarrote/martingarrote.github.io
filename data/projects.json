@@ -1,0 +1,81 @@
+[
+    {
+        "title": "Ravin Menu",
+        "description": {
+        "part1": "O menu do restaurante fictício Ravin apresenta uma interface intuitiva e prática, projetada para dispositivos com resolução 1024x768, especificamente iPads em modo paisagem. A navegação é fluida entre diferentes categorias de produtos.",
+        "part2": "Os usuários podem realizar pedidos informando a quantidade desejada e consultar o histórico de pedidos. Projeto desenvolvido durante o curso +Devs2Blu.",
+        "part3": ""
+        },
+        "image": "assets/images/ravin-menu.png",
+        "tags": [
+            "Frontend",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "github": "https://github.com/martingarrote/ravin-menu",
+        "website": "https://martingarrote.github.io/ravin-menu/index.html",
+        "openable": true
+    },
+    {
+        "title": "Reservation Management",
+        "description": {
+        "part1": "Este sistema foi desenvolvido para o gerenciamento de aluguel de salas, oferecendo funcionalidades para criação, listagem e atualização de salas, clientes e reservas. No backend, foi utilizado o Spring Framework, enquanto o Angular foi a tecnologia escolhida para o frontend.",
+        "part2": "O projeto foi desenvolvido em duas etapas, durante os módulos de Spring Framework e Angular no curso +Devs2Blu.",
+        "part3": ""
+        },
+        "image": "assets/images/reservation-management.png",
+        "tags": [
+        "Backend",
+        "Frontend",
+        "Java",
+        "Spring Boot",
+        "Angular",
+        "TypeScript"
+        ],
+        "github": "https://github.com/martingarrote/reservation-management",
+        "website": "",
+        "openable": false
+    },
+    {
+        "title": "Beauty Salon Scheduler",
+        "description": {
+            "part1": "Sistema para reservas em salão de beleza, com o diferencial de um perfil estético que considera formato de rosto e tipo de cabelo. Também permite visualizar o histórico de atendimentos e os próximos agendamentos.",
+            "part2": "O projeto foi desenvolvido em grupo durante a disciplina de Projeto Aplicado I no curso de Análise e Desenvolvimento de Sistemas na UniSENAI.",
+            "part3": ""
+        },
+        "image": "assets/images/beauty-salon-scheduler.png",
+        "tags": [
+            "Backend",
+            "Frontend",
+            "Java",
+            "Spring Boot",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap"
+        ],
+        "github": "https://github.com/martingarrote/beauty-salon-scheduler",
+        "website": "https://nattanmendes.github.io/trabalhoaex1/",
+        "openable": true
+    },
+    {
+        "title": "Book Lend",
+        "description": {
+        "part1": "O sistema oferece uma API eficiente para o gerenciamento de empréstimos de livros, com controle de acesso para que usuários possam realizar e visualizar empréstimos, enquanto administradores gerenciam o sistema.",
+        "part2": "Para maior praticidade, os dados são retornados com paginação. O tratamento de exceções, incluindo as personalizadas, garante proteção das informações e respostas adequadas.",
+        "part3": ""
+        },
+        "image": "assets/images/book_lend.png",
+        "tags": [
+        "Backend",
+        "Java",
+        "Spring Boot",
+        "Flyway",
+        "PostgreSQL"
+        ],
+        "github": "https://github.com/martingarrote/book-lend",
+        "website": "",
+        "openable": false
+    }
+]
