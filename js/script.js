@@ -135,9 +135,6 @@ function insertProjects(projects) {
   projects.forEach((p) => {
     projectContainer.innerHTML += createProjectStructure(p);
   });
-
-  // realocate
-  handleProjectHovering();
 }
 
 function createProjectStructure(project) {
@@ -185,19 +182,4 @@ function createProjectStructure(project) {
     </div>
   </div>
   `;
-}
-
-function handleProjectHovering() {
-  const container = document.getElementById("project-container");
-  const projects = document.querySelectorAll(".project");
-
-  projects.forEach(p => {
-    p.addEventListener("mouseenter", () => {
-      container.classList.add("blur-inside")
-    })
-
-    p.addEventListener("mouseleave", () => {
-      container.classList.remove("blur-inside")
-    })
-  })
 }

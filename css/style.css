@@ -378,14 +378,7 @@ main {
 
 .project:hover {
     cursor: default;
-}
-
-#project-container.blur-inside .project:not(:hover) {
-    filter: blur(2px);
-}
-
-.project:hover .project-content > p {
-    color: var(--default-text-color-intense);
+    transform: translate(0em, -2rem);
 }
 
 .project > * {
