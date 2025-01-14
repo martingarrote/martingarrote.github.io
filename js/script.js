@@ -1,5 +1,6 @@
 const header = document.querySelector("header");
 const arrow = document.getElementById("arrow");
+const copyEmail = document.getElementById("email-address");
 
 document.addEventListener("DOMContentLoaded", () => {
   loadTechs();
@@ -16,6 +17,9 @@ window.addEventListener("scroll", () => {
 });
 
 arrow.addEventListener("click", () => (location.href = "#about"));
+copyEmail.addEventListener("click", () => {
+  navigator.clipboard.writeText(copyEmail.innerText);
+})
 
 function loadTechs() {
   fetch("../data/techs.json")

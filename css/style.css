@@ -219,6 +219,7 @@ main {
     margin-top: 8rem;
     margin: 8rem auto 0rem auto;
     width: 60%;
+    scroll-margin: 10rem;
 }
 
 #timeline {
@@ -348,6 +349,7 @@ main {
 #projects {
     margin: 2rem auto;
     text-align: center;
+    scroll-margin: 10rem;
 }
 
 #projects h2 {
@@ -471,6 +473,73 @@ main {
 
 .project-btn i:hover {
     opacity: 0.6;
+}
+
+footer {
+    width: 70%;
+    margin: 5rem auto 3rem auto;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-navigation .line {
+    width: calc(50% - 2rem);
+    background-color: var(--base-color);
+}
+
+.footer-navigation i {
+    font-size: 3.2rem;
+    padding: 0.3rem;
+    margin: 0rem 1rem;
+    color: var(--base-color);
+    border-radius: 100%;
+}
+
+.footer-navigation i:hover {
+    cursor: pointer;
+    background-color: var(--transparent-background);
+}
+
+.social-medias {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.social-medias img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.social-medias i {
+    font-size: 2.4rem;
+}
+
+.social-medias a {
+    text-decoration: none;
+    color: var(--base-color);
+}
+
+.social-medias .sm-item.gmail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: auto;
+}
+
+#email-address {
+    cursor: copy;
+}
+
+#email-address:active {
+    color: var(--vibrant-text-color);
 }
 
 @keyframes slide-left {
