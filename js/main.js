@@ -1,7 +1,8 @@
 import { loadTechs, loadAboutSection, loadProjects } from "./data-controller.js"
 
 const header = document.querySelector("header");
-const navItems = document.querySelectorAll("nav > *");
+const navItems = document.querySelectorAll("nav > ul > *");
+const home = document.getElementById("home");
 
 const arrow = document.getElementById("arrow");
 const download = document.getElementById("download");
@@ -20,6 +21,7 @@ const navigationMapping = {
 };
 
 const actionMapping = [
+    { element: home,        action: () => window.scrollTo(0, 0) },
     { element: arrow,       action: () => about.scrollIntoView() },
     { element: download,    action: () => downloadResume() },
     { element: copySummary, action: () => copy(localStorage.getItem("summary")) },
@@ -29,8 +31,11 @@ const actionMapping = [
 
 document.addEventListener("DOMContentLoaded", () => {
     navItems.forEach(item => {
-        let target = item.getAttribute("data-target")
-        item.addEventListener("click", navigationMapping[target]);
+        let target = item.dataset.target;
+        
+        item.addEventListener("click", () => {
+            navigationMapping[target].scrollIntoView();
+        });
     })
 
     loadTechs();

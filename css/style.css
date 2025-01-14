@@ -95,23 +95,31 @@ header.fixed  {
     z-index: 10;
 }
 
-header a {
-    text-decoration: none;
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 6rem;
+    list-style: none;
     color: var(--title-text-color);
     font-family: var(--title-font);
     font-weight: bold;
 }
 
-header a:hover {
+nav ul li:first-of-type {
+    margin-right: auto;
+}
+
+nav ul li:hover {
+    cursor: pointer;
     color: var(--title-hover-color);
     transition: 0.1s linear;
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    gap: 6rem;
-}
 
 main {
     margin: auto;
