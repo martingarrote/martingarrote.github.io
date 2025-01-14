@@ -567,6 +567,6 @@ footer {
     }
 }
 
-@media (width < 1020) {
+@media (width < 1020px) {
     /* compact header */
 }
