@@ -652,7 +652,34 @@ footer {
         margin-top: 1rem;
         flex-direction: column;
     }
+    
+    .year-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .year-box p {
+        margin: 1rem;
+    }
+    
+    .year-box p strong {
+        color: var(--vibrant-text-color)
+    }
+    
+    .year-box .line.vertical {
+        display: none;
+    }
 
+    .year-box:first-of-type {
+        margin-top: 2rem;
+    }
+
+    .year-box:first-of-type .year::before {
+        all: unset;
+    }
+    
     .year::before {
         content: "";
         display: block;
@@ -670,25 +697,6 @@ footer {
         border-left: 0.5rem solid transparent;
         border-right: 0.5rem solid transparent;
         border-top: 0.5rem solid var(--base-color);
-    }
-
-    .year-box {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .year-box p {
-        margin: 1rem;
-    }
-
-    .year-box p strong {
-        color: var(--vibrant-text-color)
-    }
-
-    .year-box .line.vertical {
-        display: none;
     }
 
     footer {
