@@ -141,8 +141,14 @@ function buildProjectButtons(project) {
 
     const projectButtons = document.createElement("div");
     projectButtons.className = "project-buttons";
-    projectButtons.appendChild(websiteButton);
-    projectButtons.appendChild(githubButton);
+
+    if (project.website) {
+        projectButtons.appendChild(websiteButton);
+    }
+
+    if (project.github) {
+        projectButtons.appendChild(githubButton);
+    }
 
     return projectButtons;
 }
