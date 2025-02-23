@@ -601,8 +601,14 @@ footer {
         backdrop-filter: unset;
         width: 100%;
         padding: 2rem;
-        margin-top: 0rem;
+        margin-bottom: 0rem;
         user-select: none;
+        top: auto;
+        bottom: 0;
+        height: fit-content;
+        background-color: var(--bg-header-color);
+        backdrop-filter: blur(25px);
+        z-index: 10;
     }
 
     header.fixed {
@@ -630,7 +636,7 @@ footer {
     }
 
     #highlight {
-        margin-top: 12rem;
+        margin-top: 4.5rem;
         padding: 0rem 2rem;
         width: 100%;
     }
@@ -646,6 +652,10 @@ footer {
 
     #techs {
         width: 80%;
+    }
+
+    .tech-item, .project, .project > img {
+        pointer-events: none;
     }
 
     .year {
@@ -702,6 +712,7 @@ footer {
     footer {
         width: 100%;
         padding: 0rem 2rem;
+        margin-bottom: 9.5rem;
     }
 }
 
@@ -713,7 +724,6 @@ footer {
 
     #tech-container {
         width: 100%;
-        /* padding: 0rem 1rem; */
         animation: none;
     }
 
@@ -742,4 +752,4 @@ footer {
     .project {
         padding: 1rem;
     }
-} 
+}
