@@ -32,7 +32,7 @@
     /* background */
     --bg-header-color: rgba(0, 0, 0, 0.2);
     --bg-gradient-start-color: #22272E;
-    --bg-gradient-end-color: #0b0c0f;
+    --bg-gradient-end-color: #111317;
 
     --bg-gradient: linear-gradient(to bottom, var(--bg-gradient-start-color), var(--bg-gradient-end-color));
 
