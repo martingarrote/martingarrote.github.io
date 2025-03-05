@@ -1,4 +1,4 @@
-import { buildTechWrapper, buildYearBox, buildProjectStructure } from "./dom-builder.js"
+import { buildTechWrapper, buildYearBox, buildProjectStructure, buildSummary } from "./dom-builder.js"
 
 export function loadTechs() {
     fetch("../data/techs.json")
@@ -17,14 +17,18 @@ export function loadAboutSection() {
     fetch("../data/about.json")
     .then((response) => response.json())
     .then((content) => {
-        const aboutContent = document.getElementById("timeline");
+        const summaryContainer = document.getElementById("summary");
+        const timelineContainer = document.getElementById("timeline");
 
-        localStorage.setItem("summary", content.summary);
+        timelineContainer.innerHTML = "";
 
-        aboutContent.innerHTML = "";
+        const summaryElements = buildSummary(content.summary);
+        summaryContainer.append(summaryElements[0], summaryElements[1], summaryElements[2]);
+
+        storeSummary(summaryElements[0].textContent + " " + summaryElements[1].textContent)
 
         content.timeline.forEach(data => {
-            aboutContent.appendChild(buildYearBox(data))
+            timelineContainer.appendChild(buildYearBox(data))
         });
     })
     .catch((error) => console.log(error));
@@ -43,4 +47,11 @@ export function loadProjects() {
         })
     })
     .catch((error) => console.log(error));
+}
+
+function storeSummary(item) {
+    item = item.replace("<strong>", "");
+    item = item.replace("</strong>", "");
+
+    localStorage.setItem("summary", item);
 }

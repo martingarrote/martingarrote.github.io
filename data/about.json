@@ -1,5 +1,8 @@
 {
-    "summary": "Sou Martin Garrote, graduando em Análise e Desenvolvimento de Sistemas. Minha jornada começou com a formação técnica no Instituto Federal Catarinense e foi seguida pela experiência prática adquirida no programa +Devs2Blu. Tenho conhecimento em tecnologias como Java, Spring Boot, Angular, TypeScript, Git, Docker, PostgreSQL e MongoDB, além de conhecimento conceitual de metodologias ágeis. Com experiência no desenvolvimento de APIs e projetos frontend e backend, busco sempre aplicar boas práticas. No meu GitHub, você encontrará projetos acadêmicos e pessoais que refletem minhas habilidades e evolução no desenvolvimento de software.",
+    "summary": [
+        "Estou cursando superior em <strong>Análise e Desenvolvimento de Sistemas</strong> na Universidade SENAI. Meu interesse pela área surgiu durante o <strong>ensino médio técnico</strong>, que cursei entre 2020 e 2022. Em 2023, participei do programa <strong>+Devs2Blu</strong>, um curso intensivo de seis meses onde aprimorei meus conhecimentos, explorei novas tecnologias e tive contato com <strong>metodologias ágeis</strong> e <strong>conceitos de arquitetura de software</strong>.",
+        "Ao longo dessas formações, desenvolvi experiência teórica e prática por meio de projetos acadêmicos e pessoais. Onde desenvolvi <strong>APIs REST</strong> utilizando <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>PostgreSQL</strong> e <strong>Docker</strong>, implementei <strong>testes unitários</strong> com <strong>JUnit</strong> e <strong>Mockito</strong>, além de trabalhar com versionamento com <strong>Git</strong> e <strong>GitHub</strong>. Também desenvolvi sites com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, e <strong>aplicações web</strong> utilizando <strong>Angular</strong> e <strong>TypeScript</strong>."
+    ],
     "timeline": [
         {
             "year": "2020",

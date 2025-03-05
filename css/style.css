@@ -229,6 +229,28 @@ main {
     scroll-margin: 10rem;
 }
 
+#summary {
+    max-width: 80%;
+    margin: 3rem auto;
+    cursor: default;
+}
+
+#summary p {
+    text-wrap: balance;
+    text-align: justify;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+}
+
+#summary strong {
+    color: var(--strong-text-color);
+}
+
+#summary p:hover strong {
+    transition: all 0.1s linear;
+    color: var(--vibrant-text-color)
+}
+
 #timeline {
     margin-top: 5rem;
     display: flex;
@@ -328,14 +350,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.2rem solid var(--base-color);
+    border: 0.1rem solid transparent;
     border-radius: 0.8rem;
     padding: 1rem;
     gap: 0.5rem;
     color: var(--base-color);
     background-color: transparent;
+    max-width: 12rem;
     width: 100%;
-    max-width: 15rem;
+    transition: all 0.2s linear;
 }
 
 .about-button i {
@@ -345,12 +368,7 @@ main {
 .about-button:hover {
     cursor: pointer;
     color: var(--vibrant-text-color);
-    transition: color 0.15s linear;
-}
-
-.about-button:active {
-    border: 0.15rem solid var(--vibrant-text-color);
-    transition: border 0.15s linear;
+    border: 0.1rem solid var(--vibrant-text-color);
 }
 
 #projects {

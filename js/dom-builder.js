@@ -28,6 +28,26 @@ export function buildTechWrapper(techList) {
     return techWrapper;
 }
 
+export function buildSummary(data) {
+
+    const p = document.createElement("p");
+    const p2 = document.createElement("p");
+
+    p.innerHTML = data[0];
+    p2.innerHTML = data[1];
+
+    const copyIcon = document.createElement("i");
+    copyIcon.className = "ph ph-copy";
+
+    const copyBtn = document.createElement("button");
+    copyBtn.append(copyIcon);
+    copyBtn.className = "about-button";
+    copyBtn.innerHTML += " Copiar";
+    copyBtn.style.display = "none";
+
+    return [p, p2, copyBtn];
+}
+
 export function buildYearBox(data) {
     const yearBox = document.createElement("div");
     yearBox.className = "year-box";
