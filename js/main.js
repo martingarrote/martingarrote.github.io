@@ -23,7 +23,7 @@ const navigationMapping = {
 const actionMapping = [
     { element: home,        action: () => window.scrollTo(0, 0) },
     { element: arrow,       action: () => about.scrollIntoView() },
-    { element: download,    action: () => downloadResume() },
+    { element: download,    action: () => openResume() },
     { element: copySummary, action: () => copy(localStorage.getItem("summary")) },
     { element: copyEmail,   action: () => copy(copyEmail.textContent) },
     { element: backTop,     action: () => window.scrollTo(0, 0) }
@@ -59,11 +59,6 @@ function copy(content) {
     navigator.clipboard.writeText(content);
 }
 
-function downloadResume() {
-    const link = document.createElement("a");
-
-    link.setAttribute("download", "martingarrote_cv.pdf");
-    link.href = "/assets/files/martingarrote_cv.pdf";
-    link.click();
-    link.remove();
+function openResume() {
+    window.open("/assets/documents/martingarrote_cv.pdf");
 }
