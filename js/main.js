@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("scroll", () => {
     if (window.scrollY > 40) {
         header.classList.add("fixed");
+        changeHeaderBackgroundOnScroll()
     } else {
         header.classList.remove("fixed");
     }
@@ -61,4 +62,18 @@ function copy(content) {
 
 function openResume() {
     window.open("/assets/documents/martingarrote_cv.pdf");
+}
+
+function changeHeaderBackgroundOnScroll() {
+    const maxScroll = document.body.scrollHeight;
+    const scrollPercentage = Math.min(window.scrollY / maxScroll, 1);
+
+    const startColor = [34, 39, 46];
+    const endColor = [17, 19, 23];
+
+    const newColor = startColor.map((start, i) => 
+        Math.round(start + (endColor[i] - start) * scrollPercentage)
+    );
+
+    header.style.backgroundColor = `rgb(${newColor.join(',')})`;
 }

@@ -30,7 +30,7 @@
     --tag-hover-color: rgb(60, 160, 255);
 
     /* background */
-    --bg-header-color: #191d22;
+    --bg-header-color: #22272E;
     --bg-gradient-start-color: #22272E;
     --bg-gradient-end-color: #111317;
 
@@ -89,9 +89,8 @@ header {
 }
 
 header.fixed  {
-    border: 0.1rem solid var(--base-color);
+    border: 0.1rem solid gray;
     background-color: var(--bg-header-color);
-    backdrop-filter: blur(25px);
     z-index: 10;
 }
 
