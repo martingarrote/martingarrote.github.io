@@ -397,14 +397,14 @@ main {
     width: fit-content;
     max-width: 40rem;
     padding: 1.5rem;
-    border: 0.1rem solid var(--base-color);
+    border: 0.1rem solid gray;
     border-radius: 2rem;
     transition: all 0.3s linear;
+    cursor: default;
 }
 
-.project:hover {
-    cursor: default;
-    transform: translate(0em, -2rem);
+.project .line {
+    background-color: gray;
 }
 
 .project > * {
@@ -414,7 +414,7 @@ main {
 .project .img-container {
     aspect-ratio: 16/9;
     max-width: inherit;
-    border: 0.2rem solid gray;
+    border: 0.1rem solid gray;
     border-radius: 0.8rem;
     overflow: hidden;
 }
@@ -425,10 +425,6 @@ main {
     height: auto;
     max-width: inherit;
     transition: all .3s ease;
-}
-
-.project img:hover {
-    transform: scale(1.02);
 }
 
 .project-content {
