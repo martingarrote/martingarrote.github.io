@@ -69,7 +69,7 @@ function changeHeaderBackgroundOnScroll() {
     const scrollPercentage = Math.min(window.scrollY / maxScroll, 1);
 
     const startColor = [34, 39, 46];
-    const endColor = [17, 19, 23];
+    const endColor = [0, 15, 30];
 
     const newColor = startColor.map((start, i) => 
         Math.round(start + (endColor[i] - start) * scrollPercentage)
